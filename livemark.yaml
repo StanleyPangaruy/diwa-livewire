@@ -1,4 +1,15 @@
 brand:
-  text: My Project
+  text: ASEAN DIWA
 site:
   favicon: assets/favicon.ico
+
+
+pages:
+  items:  
+    - name: Home
+      path: index
+    - name: About
+      path: about
+
+blog:
+  author: Stan

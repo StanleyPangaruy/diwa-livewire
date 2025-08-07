@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="It will be great here">
-<meta name="keywords" content="my,project">
+<meta name="description" content="It is a movement.">
+<meta name="keywords" content="asean,diwa">
 <link rel="icon" href="assets/favicon.ico">
-<title>My Project | ASEAN DIWA</title>
+<title>ASEAN DIWA</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1366,29 +1366,60 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </style>
 <style>
 
-#livemark-about {
+#livemark-topics {
   color: #888;
 }
 
-</style>
-<style>
-
-#livemark-links {
-  color: #888;
-}
-
-#livemark-links ul {
+#livemark-topics .toc>.toc-list {
   overflow: hidden;
   position: relative;
+}
+
+#livemark-topics .toc>.toc-list li {
+  list-style: none;
+}
+
+#livemark-topics .toc-list {
   padding-left: 0;
   margin: 0;
 }
 
-#livemark-links li {
-  list-style: none;
+#livemark-topics a.toc-link {
+  color: currentColor;
 }
 
-#livemark-links a {
+#livemark-topics a.toc-link:hover {
+  color: #80b2e6;
+}
+
+#livemark-topics .is-active-link {
+  font-weight: 700;
+}
+
+#livemark-topics ul.secondary {
+  margin-left: 20px;
+  display: none;
+}
+
+#livemark-topics li.is-active-li ul.secondary {
+  display: block;
+}
+
+#livemark-topics li.group a.primary::after {
+  content: "\f054";
+  font-size: 16px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+#livemark-topics li.group.is-active-li a.primary::after {
+  content: "\f078";
+}
+
+#livemark-topics a {
   display: inline-block;
   color: currentColor;
   position: relative;
@@ -1398,23 +1429,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
   padding-bottom: 5px;
 }
 
-#livemark-links a:hover {
-  color: #80b2e6;
-}
-
-#livemark-links a[target="_blank"]:after {
-  content: "\f35d";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  vertical-align: text-top;
-  text-decoration: none;
-  display: inline-block;
-  color: #aaa;
-  font-size: 12px;
-  margin-left: -2px;
-}
-
-#livemark-links a[target="_blank"]:hover:after {
+#livemark-topics a:hover {
   color: #80b2e6;
 }
 
@@ -1747,12 +1762,12 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 
 <div id="livemark-pages">
   <ul class="primary">
-        <li class="primary  active">
+        <li class="primary  ">
       <a href="index.html" class="primary">
         Home
       </a>
           </li>
-        <li class="primary  ">
+        <li class="primary  active">
       <a href="about.html" class="primary">
         About
       </a>
@@ -1762,28 +1777,18 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-main">
 <div id="livemark-notes">
-      <a href="https://github.com/StanleyPangaruy/diwa-livewire/edit/main/index.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-    (2025-08-08 03:03)
+      <a href="https://github.com/StanleyPangaruy/diwa-livewire/edit/main/about.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+    (2025-08-08 03:08)
 </div>
 
-<h1>My Project</h1>
-<p>
-<p id="livemark-blog-info">
-  <strong>By Stan on None</strong> »
-  <a href="None/index.html">Blog Index</a>
-</p>It will be great here</p>
-<p>HelloWorld</p>
+<h1>ASEAN DIWA</h1>
+<p>It is a movement.</p>
 
 <div id="livemark-signs">
   <div>
-        <div class="next">
-      <a href="about.html">
-        ASEAN DIWA »
-      </a>
-    </div>
             <div class="prev">
-      <a href="about.html">
-        « ASEAN DIWA
+      <a href="index.html">
+        « My Project
       </a>
     </div>
       </div>
@@ -1796,26 +1801,10 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
   </iframe>
 </div>
 
-<div id="livemark-about">
-  <div>
-    It will be great here
+<div id="livemark-topics">
+  <div class="toc">
   </div>
 </div>
-
-<div id="livemark-links">
-  <ul>
-        <li>
-      <a href="https://github.com/StanleyPangaruy/diwa-livewire/issues" target="_blank">
-        Report
-      </a>
-    </li>
-        <li>
-      <a href="https://github.com/StanleyPangaruy/diwa-livewire/fork" target="_blank">
-        Fork
-      </a>
-    </li>
-      
-</ul></div>
 </div>
 <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -1874,6 +1863,58 @@ document.addEventListener("DOMContentLoaded", function () {
         // $(group).find(".fa").toggleClass("fa-chevron-down");
       });
   }
+});
+
+</script>
+<script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Start tocbot
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: ".toc",
+    // Where to grab the headings to build the table of contents.
+    contentSelector: "#livemark-main",
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: "h2, h3",
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    // Called each time a heading is parsed. Expects a string in return.
+    headingLabelCallback: (label) => {
+      label = label.replace(/(^#|#$)/g, "").trim();
+      // label = label.replace(/\(.*?\)$/g, "");
+      return label;
+    },
+    // Disable generating ordered lists (ol)
+    orderedList: false,
+    // Fix active link class
+    onClick: syncList,
+    scrollEndCallback: syncList,
+  });
+
+  // Style list
+  $("#livemark-topics .toc > ul").addClass("primary");
+  $("#livemark-topics .toc > ul > li").addClass("primary");
+  $("#livemark-topics .toc > ul > li > a").addClass("primary");
+  $("#livemark-topics .toc ul.is-collapsible").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li > a").addClass("secondary");
+  for (const element of $("#livemark-topics .primary")) {
+    if ($(element).find(".secondary").length) {
+      $(element).addClass("group");
+    }
+  }
+
+  // Sync list
+  function syncList() {
+    for (const element of $("#livemark-topics li.primary")) {
+      if ($(element).find(".is-active-li").length) {
+        $(element).addClass("is-active-li");
+      }
+    }
+  }
+  syncList();
 });
 
 </script>
@@ -2100,18 +2141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $('#livemark-main').unhighlight({className: 'livemark-search-found'});
   }
   const searchItems = {
-          'index': {
-          'name': 'My Project',
-          'path': 'index',
-          'relpath': 'index',
-          'text': "# My Project It will be great here HelloWorld",
-      },
-          'about': {
-          'name': 'ASEAN DIWA',
-          'path': 'about',
-          'relpath': 'about',
-          'text': "# ASEAN DIWA It is a movement.",
-      },
           'index': {
           'name': 'My Project',
           'path': 'index',
