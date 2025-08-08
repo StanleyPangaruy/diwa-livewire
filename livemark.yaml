@@ -8,8 +8,11 @@ pages:
   items:  
     - name: Home
       path: index
+    - name: Map
+      path: map
+    - name: Countries
+      path: countries
+    - name: Compare
+      path: compare
     - name: About
       path: about
-
-blog:
-  author: Stan
